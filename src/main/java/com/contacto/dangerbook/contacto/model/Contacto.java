@@ -19,9 +19,6 @@ public class Contacto {
     @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;
 
-    @Column(name = "apellido", length = 100)
-    private String apellido;
-
     @Column(name = "email", nullable = false, length = 150)
     private String email;
 

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "contacto")
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,6 +28,6 @@ public class Contacto {
     @Column(name = "telefono", nullable = false, length = 15)
     private String telefono;
 
-    @Column(name = "mensaje", nullable = false, length = 250)
+    @Column(name = "mensaje", columnDefinition = "TEXT")
     private String mensaje;
 }

@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/contacto")
+@CrossOrigin(origins = "http://localhost:5173")
 public class ContactoController {
 
     @Autowired
@@ -31,7 +32,7 @@ public class ContactoController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/guardar")
     public ResponseEntity<Contacto> save(@RequestBody Contacto contacto) {
         return ResponseEntity.ok(contactoService.save(contacto));
     }

@@ -25,6 +25,9 @@ public class ContactoService {
     }
 
     public Contacto save(Contacto contacto) {
+        if (contacto.getNombre() == null || contacto.getNombre().isEmpty()){
+            throw new IllegalArgumentException("Debe ingresar su nombre");
+        }
         return contactoRepository.save(contacto);
     }
 
